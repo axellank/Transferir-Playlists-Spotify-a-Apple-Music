@@ -2,10 +2,14 @@
 import requests
 import base64
 import json
+from dotenv import load_dotenv #Ocultar keys usando varianbles del sistema
+import os
+
+load_dotenv()
 
 # Your client credentials
-client_id = 'c1d3e6eb30db4438a8bc95b85a3d00b2'
-client_secret = 'e8e2f176cb75446381ebdd5f7f89c683'
+client_id = os.getenv('client_id')
+client_secret = os.getenv('client_secret')
 
 # Artist ID
 artist_id = '1McMsnEElThX1knmY4oliG'
